@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summit 2026 Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="registration-card">
+      <div class="header-badge">Tech Event</div>
+      <h2>Tech Summit 2026 Registration</h2>
+      <p class="subtitle">Secure your ticket and customize your experience.</p>
+
+      <form id="rsvpForm">
+        <div class="form-section">
+          <h3>Attendee Information</h3>
+          <div class="field-group">
+            <label for="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+          <div class="field-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div class="field-group">
+            <label for="ticketType">Ticket Tier</label>
+            <div class="select-wrapper">
+              <select id="ticketType" name="ticketType" required>
+                <option value="" disabled selected>Choose a tier...</option>
+                <option value="student">Student Pass</option>
+                <option value="standard">Standard Pass</option>
+                <option value="vip">VIP Experience</option>
+              </select>
+            </div>
+          </div>
+          <div class="price-container">
+            <p id="priceDisplay" class="price-tag">
+              Ticket Price: <span>Php 0</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <label class="checkbox-container">
+            <input type="checkbox" id="hasGuest" name="hasGuest" />
+            <span class="custom-checkbox"></span>
+            <span class="label-text">I am bringing a guest (+1)</span>
+          </label>
+
+          <div id="guestSection" class="nested-fields" style="display: none">
+            <div class="field-group">
+              <label for="guestName">Guest's Full Name</label>
+              <input
+                type="text"
+                id="guestName"
+                name="guestName"
+                placeholder="Guest Name"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3>Dietary Requirements</h3>
+          <p class="section-desc">
+            Select all allergies or preferences that apply to you and your
+            guest:
+          </p>
+          <div class="diet-grid">
+            <label class="checkbox-container">
+              <input type="checkbox" name="diet" value="Vegetarian" />
+              <span class="custom-checkbox"></span>
+              <span class="label-text">Vegetarian</span>
+            </label>
+            <label class="checkbox-container">
+              <input type="checkbox" name="diet" value="Vegan" />
+              <span class="custom-checkbox"></span>
+              <span class="label-text">Vegan</span>
+            </label>
+            <label class="checkbox-container">
+              <input type="checkbox" name="diet" value="Gluten-Free" />
+              <span class="custom-checkbox"></span>
+              <span class="label-text">Gluten-Free</span>
+            </label>
+            <label class="checkbox-container">
+              <input type="checkbox" name="diet" value="Nut-Allergy" />
+              <span class="custom-checkbox"></span>
+              <span class="label-text">Nut Allergy</span>
+            </label>
+            <label class="checkbox-container">
+              <input type="checkbox" name="diet" value="Dairy-Free" />
+              <span class="custom-checkbox"></span>
+              <span class="label-text">Dairy-Free</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" id="submitBtn">Confirm RSVP</button>
+        <p id="formFeedback"></p>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
